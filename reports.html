@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Reports Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <h2>Pharmacy Information System</h2>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="medicines.html">Medicines</a></li>
+      <li><a href="customers.html">Customers</a></li>
+      <li><a href="sales.html">Sales</a></li>
+      <li>
+        <a href="reports.html"
+           style="background-color: rgba(102, 126, 234, 0.3);">
+          Reports
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Daily Reports Dashboard</h1>
+      <p id="lastUpdated"></p>
+    </div>
+  </section>
+
+
+  <!-- Main Dashboard -->
+  <main class="dashboard-container">
+
+    <!-- Metrics -->
+    <section class="stats-grid" style="margin-bottom: 2rem;">
+
+      <div class="stat-card">
+        <h3>Total Revenue</h3>
+        <span class="stat-number">$0</span>
+        <p class="change" id="revenueChange"></p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Total Users</h3>
+        <span class="stat-number">0</span>
+        <p class="change" id="usersChange"></p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Congratulations!</h3>
+        <span
+          class="stat-number"
+          style="color: #667eea;"
+          id="congratsText">
+        </span>
+      </div>
+
+    </section>
+
+
+    <!-- Charts -->
+    <section
+      class="charts-grid"
+      style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      "
+    >
+
+      <div
+        class="chart-section"
+        style="
+          background: white;
+          border-radius: 20px;
+          padding: 2.5rem;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        "
+      >
+        <div class="section-header">Sales Trend</div>
+        <canvas id="salesChart" style="max-width: 100%;"></canvas>
+      </div>
+
+
+      <div
+        class="chart-section"
+        style="
+          background: white;
+          border-radius: 20px;
+          padding: 2.5rem;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        "
+      >
+        <div class="section-header">User Activity by Hour</div>
+        <canvas id="activityChart" style="max-width: 100%;"></canvas>
+      </div>
+
+    </section>
+
+
+    <!-- Data Table -->
+    <section
+      style="
+        background: white;
+        border-radius: 20px;
+        padding: 2.5rem;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      "
+    >
+
+      <div class="section-header">Data Table</div>
+
+
+      <!-- Filters -->
+      <div
+        class="filters"
+        style="
+          display: flex;
+          gap: 1rem;
+          margin-bottom: 1.5rem;
+          flex-wrap: wrap;
+        "
+      >
+
+        <label>
+          Category:
+          <select id="categoryFilter">
+            <option value="all">All</option>
+            <option value="Sales">Sales</option>
+            <option value="Analytics">Analytics</option>
+            <option value="Finance">Finance</option>
+            <option value="Operations">Operations</option>
+          </select>
+        </label>
+
+
+        <label>
+          Status:
+          <select id="statusFilter">
+            <option value="all">All</option>
+            <option value="ok">OK</option>
+            <option value="warning">Warning</option>
+            <option value="error">Error</option>
+          </select>
+        </label>
+
+
+        <button onclick="filterTable()">Filter</button>
+
+      </div>
+
+
+      <!-- Table -->
+      <table class="transactions-table">
+
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Last Update</th>
+          </tr>
+        </thead>
+
+        <tbody id="tableBody"></tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer>
+    <p id="generateTimeText"></p>
+  </footer>
+
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  <!-- Page JavaScript -->
+  <script>
+
+    /* =========================
+       SAMPLE DATA
+    ========================= */
+
+    const mockData = [
+      {
+        id: 1,
+        name: 'Daily Sales Report',
+        category: 'Sales',
+        total: 125800,
+        status: 'ok',
+        date: 'Aug 20, 2026'
+      },
+      {
+        id: 2,
+        name: 'Inventory Analysis',
+        category: 'Analytics',
+        total: 89450,
+        status: 'warning',
+        date: 'Aug 20, 2026'
+      },
+      {
+        id: 3,
+        name: 'Financial Summary',
+        category: 'Finance',
+        total: 67890,
+        status: 'error',
+        date: 'Aug 19, 2026'
+      },
+      {
+        id: 4,
+        name: 'Operations Report',
+        category: 'Operations',
+        total: 45230,
+        status: 'ok',
+        date: 'Aug 19, 2026'
+      },
+      {
+        id: 5,
+        name: 'Monthly Sales',
+        category: 'Sales',
+        total: 156700,
+        status: 'ok',
+        date: 'Aug 18, 2026'
+      }
+    ];
+
+
+    /* =========================
+       SALES CHART
+    ========================= */
+
+    const ctx1 = document
+      .getElementById('salesChart')
+      .getContext('2d');
+
+
+    const salesChart = new Chart(ctx1, {
+
+      type: 'line',
+
+      data: {
+
+        labels: [
+          'Aug 16',
+          'Aug 17',
+          'Aug 18',
+          'Aug 19',
+          'Aug 20'
+        ],
+
+        datasets: [
+          {
+            label: 'Revenue',
+
+            data: [
+              34520,
+              67890,
+              89450,
+              45230,
+              125800
+            ],
+
+            borderColor: '#667eea',
+
+            backgroundColor:
+              'rgba(102, 126, 234, 0.1)',
+
+            fill: true,
+
+            tension: 0.4
+          }
+        ]
+      },
+
+      options: {
+        responsive: true
+      }
+
+    });
+
+
+    /* =========================
+       ACTIVITY CHART
+    ========================= */
+
+    const ctx2 = document
+      .getElementById('activityChart')
+      .getContext('2d');
+
+
+    const activityChart = new Chart(ctx2, {
+
+      type: 'bar',
+
+      data: {
+
+        labels: [
+          '6am',
+          '8am',
+          '10am',
+          '12pm',
+          '2pm',
+          '4pm'
+        ],
+
+        datasets: [
+          {
+            label: 'Active Users',
+
+            data: [
+              120,
+              340,
+              580,
+              720,
+              650,
+              890
+            ],
+
+            backgroundColor: '#764ba2'
+          }
+        ]
+      },
+
+      options: {
+        responsive: true
+      }
+
+    });
+
+
+    /* =========================
+       LOAD TABLE DATA
+    ========================= */
+
+    function loadData() {
+
+      const tbody =
+        document.getElementById('tableBody');
+
+      // Clear existing rows
+      tbody.innerHTML = '';
+
+
+      mockData.forEach(row => {
+
+        const tr =
+          document.createElement('tr');
+
+
+        const statusColor = {
+
+          ok: '#43a047',
+
+          warning: '#ef6c00',
+
+          error: '#f44336'
+
+        }[row.status] || '#f44336';
+
+
+        tr.innerHTML = `
+
+          <td>${row.id}</td>
+
+          <td>${row.name}</td>
+
+          <td>${row.category}</td>
+
+          <td style="
+            color: ${statusColor};
+            font-weight: 600;
+          ">
+            ${row.total.toLocaleString()}
+          </td>
+
+          <td>
+            <span class="status-badge status-${row.status}">
+              ${row.status.toUpperCase()}
+            </span>
+          </td>
+
+          <td>${row.date}</td>
+
+        `;
+
+
+        tbody.appendChild(tr);
+
+      });
+
+
+      /* =========================
+         UPDATE DASHBOARD METRICS
+      ========================= */
+
+      const totalRevenue =
+        mockData
+          .reduce((sum, row) => sum + row.total, 0)
+          .toLocaleString();
+
+
+      document.getElementById('revenueChange').textContent =
+        `${totalRevenue} Total Revenue`;
+
+
+      document.getElementById('usersChange').textContent =
+        `${mockData.length} Reports Generated`;
+
+
+      document.getElementById('generateTimeText').textContent =
+        `© 2024 Dashboard Reports | Generated: ${new Date().toLocaleString()} | Version 1.0`;
+
+
+      document.getElementById('lastUpdated').textContent =
+        `Last updated: ${new Date().toLocaleDateString()}`;
+
+    }
+
+
+    /* =========================
+       FILTER TABLE
+    ========================= */
+
+    function filterTable() {
+
+      const category =
+        document
+          .getElementById('categoryFilter')
+          .value;
+
+
+      const status =
+        document
+          .getElementById('statusFilter')
+          .value;
+
+
+      const rows =
+        document.querySelectorAll(
+          '#tableBody tr'
+        );
+
+
+      rows.forEach(row => {
+
+        const rowCategory =
+          row.cells[2].textContent.trim();
+
+
+        const rowStatus =
+          row
+            .cells[4]
+            .textContent
+            .trim()
+            .toLowerCase();
+
+
+        const categoryMatch =
+          category === 'all' ||
+          rowCategory === category;
+
+
+        const statusMatch =
+          status === 'all' ||
+          rowStatus === status;
+
+
+        if (categoryMatch && statusMatch) {
+
+          row.style.display = '';
+
+        } else {
+
+          row.style.display = 'none';
+
+        }
+
+      });
+
+    }
+
+
+    /* =========================
+       PAGE INITIALIZATION
+    ========================= */
+
+    document.getElementById('congratsText').textContent =
+      '🎉 You created your first dashboard! 🎉';
+
+
+    // Load table
+    loadData();
+
+
+    // Automatically filter when dropdown changes
+    ['categoryFilter', 'statusFilter'].forEach(id => {
+
+      document
+        .getElementById(id)
+        .addEventListener('change', filterTable);
+
+    });
+
+  </script>
+
+</body>
+</html>
