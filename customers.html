@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aayushman Pharmacy - Customers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <h2>Aayushman Pharmacy</h2>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="medicines.html">Medicines</a></li>
+      <li><a href="customers.html" style="background-color: rgba(102, 126, 234, 0.3);">Customers</a></li>
+      <li><a href="sales.html">Sales</a></li>
+      <li><a href="reports.html">Reports</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Our Valued Customers</h1>
+      <p>Meet the people we serve with care and dedication.</p>
+    </div>
+  </section>
+
+  <main class="dashboard-container">
+    <!-- Statistics Section -->
+    <section class="stats-grid" style="margin-bottom: 2rem;">
+      <div class="stat-card">
+        <h3>Total Customers</h3>
+        <span class="stat-number">8,562</span>
+        <p>Loyal pharmacy members</p>
+      </div>
+      <div class="stat-card">
+        <h3>New This Month</h3>
+        <span class="stat-number">342</span>
+        <p>New registrations</p>
+      </div>
+      <div class="stat-card">
+        <h3>Active Prescriptions</h3>
+        <span class="stat-number">1,856</span>
+        <p>Ongoing treatments</p>
+      </div>
+      <div class="stat-card">
+        <h3>Loyalty Points</h3>
+        <span class="stat-number">2.4M+</span>
+        <p>Total accumulated</p>
+      </div>
+    </section>
+
+    <!-- Customer Categories Section -->
+    <section class="categories-section" style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); margin-bottom: 2rem;">
+      <div class="section-header">Customer Categories</div>
+      <div class="cards-grid">
+        <div class="card category-card" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left-color: #1976d2;">
+          <span class="category-icon" style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">👶</span>
+          <h4>Pediatric Care</h4>
+          <p>Families with children</p>
+          <span class="unit">1,247 families</span>
+        </div>
+
+        <div class="card category-card" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-left-color: #ef6c00;">
+          <span class="category-icon" style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">👵</span>
+          <h4>Elderly Care</h4>
+          <p>Senior health support</p>
+          <span class="unit">2,156 seniors</span>
+        </div>
+
+        <div class="card category-card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left-color: #43a047;">
+          <span class="category-icon" style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">🤰</span>
+          <h4>Maternal Care</h4>
+          <prenatal support</p>
+          <span class="unit">856 expectant mothers</span>
+        </div>
+
+        <div class="card category-card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-left-color: #8e24aa;">
+          <span class="category-icon" style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">🏋️</span>
+          <h4>Athletes</h4>
+          <p>Sports medicine clients</p>
+          <span class="unit">1,892 athletes</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Customers Table -->
+    <section class="customers-table-section" style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);">
+      <div class="section-header">Recent Customer Registrations</div>
+      <table class="customers-table">
+        <thead>
+          <tr>
+            <th>Customer ID</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Address</th>
+            <th>Packages</th>
+            <th>Total Orders</th>
+            <th>Member Since</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#CUS001</td>
+            <td>Rajesh Kumar</td>
+            <td>rajesh.k@example.com</td>
+            <td>Mumbai, India</td>
+            <td>Premium</td>
+            <td>45</td>
+            <td>Jan 12, 2023</td>
+            <td><span class="status-badge status-completed">Active</span></td>
+          </tr>
+          <tr>
+            <td>#CUS002</td>
+            <td>Priya Sharma</td>
+            <td>priya.sharma@example.com</td>
+            <td>Delhi, India</td>
+            <td>Standard</td>
+            <td>38</td>
+            <td>Feb 08, 2023</td>
+            <td><span class="status-badge status-completed">Active</span></td>
+          </tr>
+          <tr>
+            <td>#CUS003</td>
+            <td>Amit Patel</td>
+            <td>amit.patel@example.com</td>
+            <td>Ahmedabad, India</td>
+            <td>Premium</td>
+            <td>52</td>
+            <td>Mar 15, 2023</td>
+            <td><span class="status-badge status-completed">Active</span></td>
+          </tr>
+          <tr>
+            <td>#CUS004</td>
+            <td>Sneha Gupta</td>
+            <td>sneha.gupta@example.com</td>
+            <td>Bangalore, India</td>
+            <td>Standard</td>
+            <td>28</td>
+            <td>Apr 22, 2023</td>
+            <td><span class="status-badge status-completed">Active</span></td>
+          </tr>
+          <tr>
+            <td>#CUS005</td>
+            <td>Ravi Reddy</td>
+            <td>ravi.reddy@example.com</td>
+            <td>Hyderabad, India</td>
+            <td>VIP</td>
+            <td>67</td>
+            <td>May 10, 2023</td>
+            <td><span class="status-badge status-completed">Active</span></td>
+          </tr>
+          <tr>
+            <td>#CUS006</td>
+            <td>Kavita Singh</td>
+            <td>kavita.singh@example.com</td>
+            <td>Kolkata, India</td>
+            <td>Standard</td>
+            <td>32</td>
+            <td>Jun 18, 2023</td>
+            <td><span class="status-badge status-completed">Active</span></td>
+          </tr>
+          <tr>
+            <td>#CUS007</td>
+            <td>Vikram Joshi</td>
+            <td>vikram.joshi@example.com</td>
+            <td>Pune, India</td>
+            <td>Premium</td>
+            <td>41</td>
+            <td>Jul 05, 2023</td>
+            <td><span class="status-badge status-pending">Pending</span></td>
+          </tr>
+          <tr>
+            <td>#CUS008</td>
+            <td>Neha Agarwal</td>
+            <td>neha.agarwal@example.com</td>
+            <td>Jalandhar, India</td>
+            <td>Standard</td>
+            <td>24</td>
+            <td>Aug 12, 2023</td>
+            <td><span class="status-badge status-completed">Active</span></td>
+          </tr>
+          <tr>
+            <td>#CUS009</td>
+            <td>Suresh Mehta</td>
+            <td>suresh.mehta@example.com</td>
+            <td>Nagpur, India</td>
+            <td>Standard</td>
+            <td>19</td>
+            <td>Sep 20, 2023</td>
+            <td><span class="status-badge status-completed">Active</span></td>
+          </tr>
+          <tr>
+            <td>#CUS010</td>
+            <td>Poonam Verma</td>
+            <td>poonam.verma@example.com</td>
+            <td>Lucknow, India</td>
+            <td>VIP</td>
+            <td>78</td>
+            <td>Oct 03, 2023</td>
+            <td><span class="status-badge status-completed">Active</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Loyalty Rewards Section -->
+    <section class="rewards-section" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 20px; padding: 2.5rem; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);">
+      <div class="section-header">Loyalty Rewards Program</div>
+      <div class="cards-grid">
+        <div class="card reward-card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left-color: #43a047;">
+          <h4>💚 Bronze Tier</h4>
+          <p>Start your journey with exclusive discounts on first purchase.</p>
+          <span class="unit">5% off all medicines • Free delivery above $25</span>
+        </div>
+
+        <div class="card reward-card" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-left-color: #ef6c00;">
+          <h4>🟠 Silver Tier</h4>
+          <p>Unlock premium benefits as our valued regular customer.</p>
+          <span class="unit">10% off all medicines • Priority support • Birthday gift</span>
+        </div>
+
+        <div class="card reward-card" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left-color: #1976d2;">
+          <h4>🔵 Gold Tier</h4>
+          <p>Experience premium care with our most dedicated customers.</p>
+          <span class="unit">15% off all medicines • Early access to new products • Gift cards</span>
+        </div>
+
+        <div class="card reward-card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-left-color: #8e24aa;">
+          <h4>💜 Platinum Tier</h4>
+          <p>Join our inner circle and enjoy VIP treatment from start to finish.</p>
+          <span class="unit">20% off all medicines • Personal health consultant • Exclusive events</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Health Goals -->
+    <section class="goals-section" style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);">
+      <div class="section-header">Popular Health Goals Among Customers</div>
+      <div class="cards-grid">
+        <div class="card goal-card" style="background: linear-gradient(135deg, #fff5f0 0%, #ffe8d6 100%); border-left-color: #ff6b35;">
+          <span class="goal-icon" style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">🩺</span>
+          <h4>Pain Management</h4>
+          <p>Customers seeking relief from chronic and acute pain conditions.</p>
+        </div>
+
+        <div class="card goal-card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left-color: #43a047;">
+          <span class="goal-icon" style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">💪</span>
+          <h4>Fitness & Wellness</h4>
+          <p>Athletes and fitness enthusiasts looking for recovery support.</p>
+        </div>
+
+        <div class="card goal-card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-left-color: #8e24aa;">
+          <span class="goal-icon" style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">🦠</span>
+          <h4>Infection Prevention</h4>
+          <p>Sterile and antimicrobial products for health-conscious customers.</p>
+        </div>
+
+        <div class="card goal-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-left-color: #667eea;">
+          <span class="goal-icon" style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">👶</span>
+          <h4>Pediatric Care</h4>
+          <p>Families seeking safe and effective medicines for children.</p>
+        </div>
+
+        <div class="card goal-card" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-left-color: #ef6c00;">
+          <span class="goal-icon" style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">👵</span>
+          <h4>Heart Health</h4>
+          <p>Elderly customers monitoring cardiovascular health.</p>
+        </div>
+
+        <div class="card goal-card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left-color: #43a047;">
+          <span class="goal-icon" style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">🧘</span>
+          <h4>Digestive Health</h4>
+          <p>Customers managing gastrointestinal concerns.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Aayushman Pharmacy. All rights reserved.</p>
+  </footer>
+</body>
+</html>

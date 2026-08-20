@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aayushman Pharmacy - Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <h2>Aayushman Pharmacy</h2>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="dashboard.html" style="background-color: rgba(102, 126, 234, 0.3);">Dashboard</a></li>
+      <li><a href="medicines.html">Medicines</a></li>
+      <li><a href="customers.html">Customers</a></li>
+      <li><a href="sales.html">Sales</a></li>
+      <li><a href="reports.html">Reports</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Dashboard Overview</h1>
+      <p>Monitor your pharmacy operations at a glance.</p>
+    </div>
+  </section>
+
+  <main class="dashboard-container">
+    <section class="stats-grid">
+      <div class="stat-card">
+        <h3>Total Medicines</h3>
+        <span class="stat-number">1,247</span>
+        <p>Products in inventory</p>
+      </div>
+      <div class="stat-card">
+        <h3>Active Customers</h3>
+        <span class="stat-number">8,562</span>
+        <p>Loyalty members</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Sales</h3>
+        <span class="stat-number">$245K</span>
+        <p>This month</p>
+      </div>
+      <div class="stat-card">
+        <h3>Saved Reports</h3>
+        <span class="stat-number">12</span>
+        <p>Generated reports</p>
+      </div>
+    </section>
+
+    <section class="transactions-section">
+      <div class="section-header">Recent Transactions</div>
+      <table class="transactions-table">
+        <thead>
+          <tr>
+            <th>Transaction ID</th>
+            <th>Patient Name</th>
+            <th>Medicine</th>
+            <th>Quantity</th>
+            <th>Total Amount</th>
+            <th>Status</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#TRX001</td>
+            <td>Rajesh Kumar</td>
+            <td>Paracetamol 650mg</td>
+            <td>2 Boxes</td>
+            <td>$12.50</td>
+            <td><span class="status-badge status-completed">Completed</span></td>
+            <td>Aug 20, 2024</td>
+          </tr>
+          <tr>
+            <td>#TRX002</td>
+            <td>Priya Sharma</td>
+            <td>Ambroxol Syrup</td>
+            <td>1 Bottle</td>
+            <td>$8.75</td>
+            <td><span class="status-badge status-processing">Processing</span></td>
+            <td>Aug 20, 2024</td>
+          </tr>
+          <tr>
+            <td>#TRX003</td>
+            <td>Amit Patel</td>
+            <td>Vitamins Complex</td>
+            <td>3 Boxes</td>
+            <td>$34.20</td>
+            <td><span class="status-badge status-completed">Completed</span></td>
+            <td>Aug 19, 2024</td>
+          </tr>
+          <tr>
+            <td>#TRX004</td>
+            <td>Sneha Gupta</td>
+            <td>Dolo 650 Tablet</td>
+            <td>10 Packs</td>
+            <td>$28.00</td>
+            <td><span class="status-badge status-pending">Pending</span></td>
+            <td>Aug 19, 2024</td>
+          </tr>
+          <tr>
+            <td>#TRX005</td>
+            <td>Ravi Reddy</td>
+            <td>Digene Syrup</td>
+            <td>3 Bottles</td>
+            <td>$21.90</td>
+            <td><span class="status-badge status-canceled">Canceled</span></td>
+            <td>Aug 18, 2024</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="low-stock-section">
+      <div class="section-header">Low Stock Medicines Alert</div>
+      <div class="cards-grid" id="cards-grid">
+        <div class="card">
+          <h4>Dolo 650mg - 15 Tablets</h4>
+          <p>Paracetamol</p>
+          <span class="unit">Only 15 left • In Stock: 20 units</span>
+        </div>
+        <div class="card">
+          <h4>Sudafed - Cold Medicine</h4>
+          <p>Pseudoephedrine HCL</p>
+          <span class="unit">Only 8 left • In Stock: 10 units</span>
+        </div>
+        <div class="card">
+          <h4>Magnesium Oxide - 50 Capsules</h4>
+          <p>Vasograin</p>
+          <span class="unit">Only 8 left • In Stock: 12 units</span>
+        </div>
+        <div class="card">
+          <h4>Digene Syrup - 60ml</h4>
+          <p>Bromhexine Hydrochloride</p>
+          <span class="unit">Only 6 left • In Stock: 8 units</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="activity-section" style="box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); border-radius: 20px; padding: 2.5rem; margin-bottom: 2rem;">
+      <div class="section-header">Today's Activity Summary</div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+        <div class="activity-card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 12px; padding: 1.5rem; text-align: center;">
+          <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem;">📦</span>
+          <strong style="display: block; color: #2e7d32; font-size: 1.4rem;">156</strong>
+          <span style="color: #555;">Orders Fulfilled</span>
+        </div>
+        <div class="activity-card" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-radius: 12px; padding: 1.5rem; text-align: center;">
+          <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem;">💰</span>
+          <strong style="display: block; color: #1565c0; font-size: 1.4rem;">$3,847</strong>
+          <span style="color: #555;">Revenue Today</span>
+        </div>
+        <div class="activity-card" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-radius: 12px; padding: 1.5rem; text-align: center;">
+          <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem;">👥</span>
+          <strong style="display: block; color: #ef6c00; font-size: 1.4rem;">38</strong>
+          <span style="color: #555;">New Customers</span>
+        </div>
+        <div class="activity-card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-radius: 12px; padding: 1.5rem; text-align: center;">
+          <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem;">📋</span>
+          <strong style="display: block; color: #8e24aa; font-size: 1.4rem;">7</strong>
+          <span style="color: #555;">Refund Requests</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Aayushman Pharmacy. All rights reserved.</p>
+  </footer>
+</body>
+</html>

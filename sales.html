@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aayushman Pharmacy - Sales</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <h2>Aayushman Pharmacy</h2>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="medicines.html">Medicines</a></li>
+      <li><a href="customers.html">Customers</a></li>
+      <li><a href="sales.html" style="background-color: rgba(102, 126, 234, 0.3);">Sales</a></li>
+      <li><a href="reports.html">Reports</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Sales Overview</h1>
+      <p>Track your sales performance and revenue.</p>
+    </div>
+  </section>
+
+  <main class="dashboard-container">
+    <!-- Sales Statistics -->
+    <section class="stats-grid" style="margin-bottom: 2rem;">
+      <div class="stat-card">
+        <h3>Total Sales Today</h3>
+        <span class="stat-number">$3,847</span>
+        <p>↑ 12% from yesterday</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Sales This Month</h3>
+        <span class="stat-number">$245K</span>
+        <p>Goal: $300K • 82% achieved</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Orders Today</h3>
+        <span class="stat-number">156</span>
+        <p>↑ 8 orders vs yesterday</p>
+      </div>
+      <div class="stat-card">
+        <h3>Average Order Value</h3>
+        <span class="stat-number">$24.66</span>
+        <p>$+1.20 from last month</p>
+      </div>
+    </section>
+
+    <!-- Sales by Category -->
+    <section class="sales-categories-section" style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); margin-bottom: 2rem;">
+      <div class="section-header">Sales by Medicine Category</div>
+      <div class="cards-grid">
+        <div class="card sales-card" style="background: linear-gradient(135deg, #fff5f0 0%, #ffe8d6 100%); border-left-color: #ff6b35;">
+          <h4>💊 Pain Relief</h4>
+          <span class="unit">$42,350 • Top seller!</span>
+          <p>Dolo, Aspirin, Morantoc products</p>
+        </div>
+
+        <div class="card sales-card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left-color: #43a047;">
+          <h4>🤧 Cold & Flu</h4>
+          <span class="unit">$38,200 • Strong demand</span>
+          <p>Ambroxol, Sudafed, Digene</p>
+        </div>
+
+        <div class="card sales-card" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left-color: #1976d2;">
+          <h4>💊 Vitamins & Supplements</h4>
+          <span class="unit">$34,850 • Growing category</span>
+          <p>Vitamins, Fish Oil, Minerals</p>
+        </div>
+
+        <div class="card sales-card" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-left-color: #ef6c00;">
+          <h4>👵 Elderly Care</h4>
+          <span class="unit">$28,950 • Steady sales</span>
+          <p>Blood pressure, Diabetes meds</p>
+        </div>
+
+        <div class="card sales-card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-left-color: #8e24aa;">
+          <h4>🤰 Maternal Care</h4>
+          <span class="unit">$22,400 • Seasonal spike</span>
+          <p>Prenatal vitamins, Postnatal care</p>
+        </div>
+
+        <div class="card sales-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-left-color: #667eea;">
+          <h4>🧴 Skincare & Beauty</h4>
+          <span class="unit">$18,650 • Consistent growth</span>
+          <p>Sunscreen, Lotion, Creams</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hourly Sales Chart -->
+    <section class="hourly-sales-section" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 20px; padding: 2.5rem; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); margin-bottom: 2rem;">
+      <div class="section-header">Hourly Sales Activity</div>
+      <div class="hourly-chart" style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; background: #eee; border: 1px solid #ddd;">
+        <div class="hour-bar" style="background: #ff6b35; padding: 1.2rem; text-align: center;">
+          <strong>08:00</strong>
+          <p>$145</p>
+        </div>
+        <div class="hour-bar" style="background: #f7931e; padding: 1.2rem; text-align: center;">
+          <strong>09:00</strong>
+          <p>$389</p>
+        </div>
+        <div class="hour-bar" style="background: #ff6b35; padding: 1.2rem; text-align: center;">
+          <strong>10:00</strong>
+          <p>$724</p>
+        </div>
+        <div class="hour-bar" style="background: #f7931e; padding: 1.2rem; text-align: center;">
+          <strong>11:00</strong>
+          <p>$1,056</p>
+        </div>
+        <div class="hour-bar" style="background: #ff6b35; padding: 1.2rem; text-align: center;">
+          <strong>12:00</strong>
+          <p>$892</p>
+        </div>
+        <div class="hour-bar" style="background: #f7931e; padding: 1.2rem; text-align: center;">
+          <strong>13:00</strong>
+          <p>$645</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Today's Top Transactions -->
+    <section class="top-transactions-section" style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);">
+      <div class="section-header">Today's Top Transactions</div>
+      <table class="transactions-table">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Patient</th>
+            <th>Medicines Ordered</th>
+            <th>Quantity</th>
+            <th>Total Value</th>
+            <th>Payment Method</th>
+            <th>Completion Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#ORD20240818-001</td>
+            <td>Rajesh Kumar</td>
+            <td>Dolo 650mg, Vitamin D, Zinc Supplement</td>
+            <td>1 Box, 2 Boxes, 1 Bottle</td>
+            <td style="color: #43a047; font-weight: 600;">$48.70</td>
+            <td>Credit Card</td>
+            <td><span class="status-badge status-completed">✓ Completed</span></td>
+          </tr>
+          <tr>
+            <td>#ORD20240818-002</td>
+            <td>Priya Sharma</td>
+            <td>Ambroxol Syrup, Digene, Lactulose</td>
+            <td>3 Bottles, 2 Boxes, 1 Bottle</td>
+            <td style="color: #43a047; font-weight: 600;">$27.86</td>
+            <td>PayPal</td>
+            <td><span class="status-badge status-completed">✓ Completed</span></td>
+          </tr>
+          <tr>
+            <td>#ORD20240818-003</td>
+            <td>Amit Patel</td>
+            <td>Vitamins Complex, Sunscreen SPF 50, Bleach Liquid</td>
+            <td>3 Boxes, 22 Tubes, 120 Bottles</td>
+            <td style="color: #43a047; font-weight: 600;">$87.30</td>
+            <td>Cash</td>
+            <td><span class="status-badge status-completed">✓ Completed</span></td>
+          </tr>
+          <tr>
+            <td>#ORD20240818-004</td>
+            <td>Sneha Gupta</td>
+            <td>Dolo 650 Tablet, Tinset Gel, Aspirin</td>
+            <td>10 Packs, 12 Tubes, 23 Bottles</td>
+            <td style="color: #ef6c00; font-weight: 600;">$48.76 (Refunded)</td>
+            <td>Credit Card</td>
+            <td><span class="status-badge status-canceled">↻ Refunded</span></td>
+          </tr>
+          <tr>
+            <td>#ORD20240818-005</td>
+            <td>Ravi Reddy</td>
+            <td>Lisinopril 40mg, Grapefruit Juice, Fish Oil</td>
+            <td>1 Box, 46 Cups, 7 Cans</td>
+            <td style="color: #43a047; font-weight: 600;">$29.86</td>
+            <td>Debit Card</td>
+            <td><span class="status-badge status-processing">▌ In Process</span></td>
+          </tr>
+          <tr>
+            <td>#ORD20240818-006</td>
+            <td>Kavita Singh</td>
+            <td>Magnesium Oxide, Cold & Flu Medicine, Tinset Soup</td>
+            <td>72 Capsules, 30 Boxes, 3 Cans</td>
+            <td style="color: #43a047; font-weight: 600;">$18.45</td>
+            <td>Mood Payment</td>
+            <td><span class="status-badge status-completed">✓ Completed</span></td>
+          </tr>
+          <tr>
+            <td>#ORD20240818-007</td>
+            <td>Vikram Joshi</td>
+            <td>Sudafed Cold Medicine, Bleach Liquid, DHA Omega-3</td>
+            <td>2 Boxes, 120 Bottles, 56 Cans</td>
+            <td style="color: #43a047; font-weight: 600;">$176.00</td>
+            <td>Credit Card</td>
+            <td><span class="status-badge status-completed">✓ Completed</span></td>
+          </tr>
+          <tr>
+            <td>#ORD20240818-008</td>
+            <td>Neha Agarwal</td>
+            <td>Ambroxol Syrup, Vitamin D Supplement, Folic Acid</td>
+            <td>30 Bottles, 56 Cans, 1 Box</td>
+            <td style="color: #43a047; font-weight: 600;">$24.82</td>
+            <td>PayPal</td>
+            <td><span class="status-badge status-processing">▌ In Process</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Payment Methods Breakdown -->
+    <section class="payment-methods-section" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 20px; padding: 2.5rem; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);">
+      <div class="section-header">Payment Methods Breakdown</div>
+      <div class="cards-grid">
+        <div class="card payment-card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left-color: #43a047;">
+          <h4>💳 Credit Cards</h4>
+          <span class="unit">42%</span>
+          <p>$102,500 this month</p>
+        </div>
+
+        <div class="card payment-card" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-left-color: #ef6c00;">
+          <h4>💵 Cash & Debit</h4>
+          <span class="unit">38%</span>
+          <p>$94,200 this month</p>
+        </div>
+
+        <div class="card payment-card" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left-color: #1976d2;">
+          <h4>📱 Digital Wallets</h4>
+          <span class="unit">18%</span>
+          <p>$59,400 this month</p>
+        </div>
+
+        <div class="card payment-card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-left-color: #8e24aa;">
+          <h4>📧 PayPal & Others</h4>
+          <span class="unit">2%</span>
+          <p>$6,900 this month</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Products Section -->
+    <section class="top-products-section" style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);">
+      <div class="section-header">🏆 Top Selling Products This Week</div>
+      <div class="cards-grid">
+        <div class="card product-card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left-color: #43a047;">
+          <h4>🥇 #1 Dolo 650mg</h4>
+          <span class="unit"><strong>3,245 boxes</strong> sold this week</span>
+          <p>$9,856.25 • Pain relief leader!</p>
+        </div>
+
+        <div class="card product-card" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left-color: #1976d2;">
+          <h4>🥈 #2 Ambroxol Syrup</h4>
+          <span class="unit"><strong>2,856 bottles</strong> sold this week</span>
+          <p>$10,632.00 • Cold season essentials</p>
+        </div>
+
+        <div class="card product-card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left-color: #43a047;">
+          <h4>🥉 #3 Vitamin Complex</h4>
+          <span class="unit"><strong>2,456 boxes</strong> sold this week</span>
+          <p>$61,400.00 • Health-conscious choice</p>
+        </div>
+
+        <div class="card product-card" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-left-color: #ef6c00;">
+          <h4>#4 Lisinopril 40mg</h4>
+          <span class="unit"><strong>1,987 boxes</strong> sold this week</span>
+          <p>$130,450.22 • Chronic care essential</p>
+        </div>
+
+        <div class="card product-card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-left-color: #8e24aa;">
+          <h4>#5 Sunscreen SPF 50</h4>
+          <span class="unit"><strong>1,654 tubes</strong> sold this week</span>
+          <p>$6,450.60 • Summer favorites</p>
+        </div>
+
+        <div class="card product-card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left-color: #43a047;">
+          <h4>#6 Cold & Flu Medicine</h4>
+          <span class="unit"><strong>1,245 boxes</strong> sold this week</span>
+          <p>$10,582.50 • Multi-symptom relief</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weekly Sales Trend -->
+    <section class="weekly-trend-section" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 20px; padding: 2.5rem; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);">
+      <div class="section-header">📊 Weekly Sales Trend</div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem;">
+        <div class="trend-card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 12px; padding: 1.5rem; text-align: center;">
+          <span style="font-size: 1.8rem; display: block; margin-bottom: 0.5rem;">Mon</span>
+          <strong style="display: block; color: #2e7d32; font-size: 1.4rem;">$4,890</strong>
+        </div>
+        <div class="trend-card" style="background: linear-gradient(135deg, #fffcf0 0%, #fff5e6 100%); border-radius: 12px; padding: 1.5rem; text-align: center;">
+          <span style="font-size: 1.8rem; display: block; margin-bottom: 0.5rem;">Tues</span>
+          <strong style="display: block; color: #ef6c00; font-size: 1.4rem;">$5,234</strong>
+        </div>
+        <div class="trend-card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-radius: 12px; padding: 1.5rem; text-align: center;">
+          <span style="font-size: 1.8rem; display: block; margin-bottom: 0.5rem;">Wed</span>
+          <strong style="display: block; color: #8e24aa; font-size: 1.4rem;">$3,650</strong>
+        </div>
+        <div class="trend-card" style="background: linear-gradient(135deg, #fff5f0 0%, #ffe8d6 100%); border-radius: 12px; padding: 1.5rem; text-align: center;">
+          <span style="font-size: 1.8rem; display: block; margin-bottom: 0.5rem;">Thu</span>
+          <strong style="display: block; color: #e65100; font-size: 1.4rem;">$5,892</strong>
+        </div>
+        <div class="trend-card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-radius: 12px; padding: 1.5rem; text-align: center;">
+          <span style="font-size: 1.8rem; display: block; margin-bottom: 0.5rem;">Fri</span>
+          <strong style="display: block; color: #8e24aa; font-size: 1.4rem;">$4,120</strong>
+        </div>
+        <div class="trend-card" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-radius: 12px; padding: 1.5rem; text-align: center;">
+          <span style="font-size: 1.8rem; display: block; margin-bottom: 0.5rem;">Sat</span>
+          <strong style="display: block; color: #1565c0; font-size: 1.4rem;">$3,780</strong>
+        </div>
+        <div class="trend-card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 12px; padding: 1.5rem; text-align: center;">
+          <span style="font-size: 1.8rem; display: block; margin-bottom: 0.5rem;">Sun</span>
+          <strong style="display: block; color: #2e7d32; font-size: 1.4rem;">$2,950</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Aayushman Pharmacy. All rights reserved.</p>
+  </footer>
+</body>
+</html>

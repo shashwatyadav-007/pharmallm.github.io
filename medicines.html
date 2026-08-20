@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aayushman Pharmacy - Medicines</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <h2>Aayushman Pharmacy</h2>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="medicines.html" style="background-color: rgba(102, 126, 234, 0.3);">Medicines</a></li>
+      <li><a href="customers.html">Customers</a></li>
+      <li><a href="sales.html">Sales</a></li>
+      <li><a href="reports.html">Reports</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Our Medicines Catalog</h1>
+      <p>Browse our extensive collection of genuine medicines.</p>
+    </div>
+  </section>
+
+  <main class="dashboard-container">
+    <section class="search-filter-section" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+      <div class="search-card" style="background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);">
+        <h3>Search Medicines</h3>
+        <input type="text" placeholder="Search by name..." style="width: 100%; padding: 0.8rem; border: none; background: #f5f5f5; border-radius: 8px; margin-top: 0.5rem;">
+      </div>
+      <div class="filter-card" style="background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);">
+        <h3>Filter by Category</h3>
+        <select style="width: 100%; padding: 0.8rem; border: none; background: #f5f5f5; border-radius: 8px; margin-top: 0.5rem;">
+          <option>All Categories</option>
+          <option>Pain Relief</option>
+          <option>Cold & Flu</option>
+          <option>Antibiotics</option>
+          <option>Heart Care</option>
+          <option>Digestive Health</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="medicines-section" style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);">
+      <div class="section-header">Available Medicines</div>
+      <div class="cards-grid">
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">💊</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Dolo 650mg - Tablet</h4>
+          <p>Paracetamol for pain relief</p>
+          <span style="color: #1976d2; font-weight: 600;">$3.50 / box ($84.00 for 24 boxes)</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">💧</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Ambroxol Syrup</h4>
+          <p>Mucus reducer for cough</p>
+          <span style="color: #1976d2; font-weight: 600;">$4.50 / bottle ($135.00 for 30 bottles)</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">🧠</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); color: #c62828; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">Low Stock</span>
+          </div>
+          <h4>Digene Syrup</h4>
+          <p>Antibacterial for respiratory conditions</p>
+          <span style="color: #c62828; font-weight: 600;">$8.90 / bottle ($17.80 for 2 bottles)</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">🏃</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Vitamins Complex</h4>
+          <p>Daily multivitamin supplements</p>
+          <span style="color: #1976d2; font-weight: 600;">$25.00 / box ($75.00 for 3 boxes)</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">❄️</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); color: #ef6c00; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">Low Stock</span>
+          </div>
+          <h4>Sudafed - Cold Medicine</h4>
+          <p>Rapid relief from cold symptoms</p>
+          <span style="color: #c62828; font-weight: 600;">$12.50 / box ($25.00 for 2 boxes)</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">❤️</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Lisinopril 40mg</h4>
+          <p>Blood pressure management</p>
+          <span style="color: #1976d2; font-weight: 600;">$65.60 / box ($65.60 per box)</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">🦷</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Dentagyl Mouthwash</h4>
+          <p>Anti-bacterial mouthwash for oral care</p>
+          <span style="color: #1976d2; font-weight: 600;">$15.00 / bottle ($30.00 for 2 bottles)</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">🧴</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Sunscreen SPF 50</h4>
+          <p>Broad spectrum UV protection</p>
+          <span style="color: #1976d2; font-weight: 600;">$3.90 / tube ($87.30 for 22 tubes)</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">🧪</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Bleach Liquid</h4>
+          <p>Purpose bleach for cleaning</p>
+          <span style="color: #1976d2; font-weight: 600;">$2.30 / bottle ($276.00 for 120 bottles)</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">⚡</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #effafa 0%, #c8f7d5 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Aspirin 5mg</h4>
+          <p>Fast acting pain medication</p>
+          <span style="color: #1976d2; font-weight: 600;">$7.50 / bottle ($176.00 for 23 bottles)</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">🔧</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Cold & Flu Medicine</h4>
+          <p>Gripex cold and flu relief</p>
+          <span style="color: #1976d2; font-weight: 600;">$8.50 / box ($255.00 for 30 boxes)</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">💪</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Tinset Muscle Pain Gel</h4>
+          <p>Fast relief for muscle soreness</p>
+          <span style="color: #1976d2; font-weight: 600;">Invalid price listed • $2.80 / tube ($33.60 for 12 tubes)</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">👓</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Lactulose - Laxative</h4>
+          <p>Bowel health supplement</p>
+          <span style="color: #1976d2; font-weight: 600;">$3.50 / bottle ($28.00 for 8 bottles)</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">🐓</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Tinset Chicken Soup</h4>
+          <p>Natural immunity booster</p>
+          <span style="color: #1976d2; font-weight: 600;">$4.80 / cup ($16)•In Stock:1 units</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">🩹</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Digene - Antibacterial</h4>
+          <p>Vasograin cold & flu relief</p>
+          <span style="color: #1976d2; font-weight: 600;">$10.50 / bottle ($252.00 for 24 bottles)</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">🍵</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Magnesium Oxide - Supplement</h4>
+          <p>Vasograin for relaxation</p>
+          <span style="color: #1976d2; font-weight: 600;">$5.50 / capsule ($396.00 for 72 capsules)</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">🦠</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Zinc Suppliment</h4>
+          <p>Digene immune support</p>
+          <span style="color: #1976d2; font-weight: 600;">$16.70 / pill ($38)•In Stock:2 units</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">🦠</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Vitamins Complex - Premium</h4>
+          <p>Daily multivitamin supplements</p>
+          <span class="unit">$25.00 / box ($75.00 for 3 boxes)</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">🍎</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Grapefruit - Fresh Juice</h4>
+          <p>Lysine natural vitamin C supplement</p>
+          <span class="unit">$6.80 / cup ($315,00 for 46 cups)</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">🧬</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>DHA-omega-3 - Fish Oil</h4>
+          <p>Cognitive and heart health</p>
+          <span class="unit">$6.80 / capsule ($261)•In Stock:7 units</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">🌟</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Morantoc - Antihistamine</h4>
+          <p>Vitamin D for bone health</p>
+          <span class="unit">$9.50 / bottle ($39)•In Stock:2 units</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">🧴</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Lactulose - Laxative Cream</h4>
+          <p>Bowel health supplement cream</p>
+          <span class="unit">$3.90 / tube ($58)•In Stock:1 units</span>
+        </div>
+
+        <div class="card medicine-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <span class="medicine-icon" style="font-size: 2.5rem;">💉</span>
+            <span class="stock-status" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #2e7d32; padding: 0.3rem 0.8rem; border-radius: 15px; font-weight: 600;">In Stock</span>
+          </div>
+          <h4>Folic Acid - Pregnancy Care</h4>
+          <p>Essential for prenatal care</p>
+          <span class="unit">$3.40 / bottle ($27)•In Stock:1 units</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Aayushman Pharmacy. All rights reserved.</p>
+  </footer>
+</body>
+</html>

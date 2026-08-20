@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aayushman Pharmacy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <h2>Aayushman Pharmacy</h2>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="medicines.html" style="background-color: rgba(102, 126, 234, 0.3);">Medicines</a></li>
+      <li><a href="customers.html">Customers</a></li>
+      <li><a href="sales.html">Sales</a></li>
+      <li><a href="reports.html">Reports</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Aayushman Pharmacy</h1>
+      <p>Your trusted partner for quality healthcare essentials.</p>
+      <button class="btn-primary">Shop Now</button>
+    </div>
+  </section>
+
+  <main id="dashboard" class="dashboard-container">
+    <section class="stats-grid">
+      <div class="stat-card">
+        <h3>Medicines</h3>
+        <span class="stat-number">1,247</span>
+        <p total-medicines-count></p>
+      </div>
+      <div class="stat-card">
+        <h3>Customers</h3>
+        <span class="stat-number">8,562</span>
+        <p total-customers-count></p>
+      </div>
+      <div class="stat-card">
+        <h3>Sales</h3>
+        <span class="stat-number">$245K</span>
+        <p total-sales-count></p>
+      </div>
+      <div class="stat-card">
+        <h3>Reports</h3>
+        <span class="stat-number">12</span>
+        <p total-reports-count></p>
+      </div>
+    </section>
+
+    <section class="transactions-section">
+      <h2 id="recent-transactions-heading">Recent Transactions</h2>
+      <table class="transactions-table" id="transactions-table">
+        <tr>
+          <th>ID</th>
+          <th>Patient</th>
+          <th>Medicine</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Status</th>
+          <th>Date</th>
+        </tr>
+      </table>
+    </section>
+
+    <section id="low-stock" class="low-stock-section">
+      <h2 id="medicines-heading">Low Stock Medicines</h2>
+      <div class="cards-grid" id="cards-grid">
+        <!-- Low stock cards will be rendered here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Aayushman Pharmacy. All rights reserved.</p>
+  </footer>
+</body>
+</html>
